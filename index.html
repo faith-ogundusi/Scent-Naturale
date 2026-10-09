@@ -1,0 +1,509 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5efe5">
+  <meta name="description" content="Discover fragrances, beauty essentials, accessories and thoughtful gifts at Scent Naturalè.">
+
+  <title>Scent Naturalè | Fragrance & Beauty</title>
+
+  <style>
+    :root {
+      --ivory: #f5efe5;
+      --gold: #c6a66b;
+      --mocha: #654735;
+      --espresso: #30241f;
+      --white: #fffdf9;
+      --muted: #786d64;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--white);
+      color: var(--espresso);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .announcement {
+      background: var(--espresso);
+      color: var(--ivory);
+      text-align: center;
+      padding: 9px 12px;
+      font: 11px Arial, sans-serif;
+      letter-spacing: 1px;
+    }
+
+    header {
+      padding: 20px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      border-bottom: 1px solid #eee5d9;
+      background: var(--white);
+    }
+
+    .brand {
+      font-size: clamp(21px, 5vw, 30px);
+      letter-spacing: -1px;
+      font-weight: bold;
+    }
+
+    .brand span {
+      color: var(--mocha);
+    }
+
+    nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      font: 12px Arial, sans-serif;
+    }
+
+    nav a:hover {
+      color: var(--mocha);
+    }
+
+    .hero {
+      background: var(--ivory);
+      padding: 65px 7%;
+      text-align: center;
+    }
+
+    .eyebrow {
+      color: var(--mocha);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font: 11px Arial, sans-serif;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(39px, 8vw, 68px);
+      font-weight: normal;
+      line-height: 1.12;
+      max-width: 720px;
+      margin: 0 auto 20px;
+    }
+
+    .hero p {
+      max-width: 470px;
+      margin: 0 auto 27px;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--espresso);
+      color: white;
+      padding: 13px 23px;
+      font: 12px Arial, sans-serif;
+      letter-spacing: 1px;
+      border: 1px solid var(--espresso);
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background: var(--mocha);
+    }
+
+    .button-light {
+      background: transparent;
+      color: var(--espresso);
+      border-color: var(--gold);
+    }
+
+    section {
+      padding: 55px 5%;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(27px, 5vw, 38px);
+      font-weight: normal;
+      margin-bottom: 8px;
+    }
+
+    .section-heading p {
+      font: 13px Arial, sans-serif;
+      color: var(--muted);
+    }
+
+    .categories {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .category {
+      min-height: 120px;
+      padding: 20px 12px;
+      background: var(--ivory);
+      border: 1px solid #eadfce;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .category .symbol {
+      font-size: 25px;
+      color: var(--mocha);
+    }
+
+    .category h3 {
+      font-size: 17px;
+      font-weight: normal;
+    }
+
+    .category p {
+      font: 11px Arial, sans-serif;
+      color: var(--muted);
+    }
+
+    .products {
+      background: #faf7f1;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .product {
+      background: var(--white);
+      border: 1px solid #eee5d9;
+      padding-bottom: 16px;
+      text-align: center;
+    }
+
+    .product-art {
+      background: var(--ivory);
+      min-height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 42px;
+    }
+
+    .product h3 {
+      font-size: 17px;
+      font-weight: normal;
+      margin: 14px 8px 5px;
+    }
+
+    .product p {
+      color: var(--muted);
+      font: 12px Arial, sans-serif;
+      margin: 0 8px 12px;
+    }
+
+    .product .button {
+      padding: 10px 12px;
+      font-size: 10px;
+      max-width: 90%;
+    }
+
+    .note {
+      text-align: center;
+      color: var(--muted);
+      font: 12px Arial, sans-serif;
+      margin-top: 20px;
+    }
+
+    .about {
+      text-align: center;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    .about h2 {
+      font-size: 32px;
+      font-weight: normal;
+      margin-bottom: 15px;
+    }
+
+    .about p {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 22px;
+    }
+
+    footer {
+      background: var(--espresso);
+      color: var(--ivory);
+      text-align: center;
+      padding: 32px 5%;
+    }
+
+    footer .brand {
+      margin-bottom: 8px;
+    }
+
+    footer p {
+      font: 12px Arial, sans-serif;
+      margin: 8px 0;
+    }
+
+    footer a {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    @media (min-width: 700px) {
+      .hero {
+        padding: 95px 10%;
+      }
+
+      .categories {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 20px;
+      }
+
+      .product-art {
+        min-height: 190px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav {
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="announcement">
+    A LITTLE LUXURY, EVERY DAY
+  </div>
+
+  <header>
+    <a class="brand" href="#home">Scent <span>Naturalè</span></a>
+
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#categories">Categories</a>
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <p class="eyebrow">Fragrance · Beauty · Gifting</p>
+
+      <h1>Your scent.<br>Your signature.</h1>
+
+      <p>
+        Discover little luxuries that make everyday moments
+        feel special. Find your favourites with Scent Naturalè.
+      </p>
+
+      <a class="button" href="#shop">EXPLORE OUR COLLECTION</a>
+    </section>
+
+    <section id="categories">
+      <div class="section-heading">
+        <p class="eyebrow">Find your favourites</p>
+        <h2>Shop by Category</h2>
+        <p>Something special for you or someone you love.</p>
+      </div>
+
+      <div class="categories">
+        <a class="category" href="#shop">
+          <span class="symbol">✧</span>
+          <h3>Perfumes & Oils</h3>
+          <p>Scents to remember</p>
+        </a>
+
+        <a class="category" href="#shop">
+          <span class="symbol">❋</span>
+          <h3>Body Mists</h3>
+          <p>Your everyday refresh</p>
+        </a>
+
+        <a class="category" href="#shop">
+          <span class="symbol">◇</span>
+          <h3>Jewelry</h3>
+          <p>Beautiful finishing touches</p>
+        </a>
+
+        <a class="category" href="#shop">
+          <span class="symbol">♡</span>
+          <h3>Gift Sets</h3>
+          <p>Thoughtfully chosen</p>
+        </a>
+
+        <a class="category" href="#shop">
+          <span class="symbol">❀</span>
+          <h3>Body & Skincare</h3>
+          <p>Everyday care</p>
+        </a>
+      </div>
+    </section>
+
+    <section class="products" id="shop">
+      <div class="section-heading">
+        <p class="eyebrow">The Scent Naturalè edit</p>
+        <h2>Explore Our Store</h2>
+        <p>Our collection is being prepared just for you.</p>
+      </div>
+
+      <div class="product-grid">
+        <article class="product">
+          <div class="product-art" aria-hidden="true">♧</div>
+          <h3>Perfumes & Oils</h3>
+          <p>Ask us about available scents.</p>
+          <a class="button order-link" href="#contact"
+             data-product="Perfumes and Fragrance Oils">
+            ENQUIRE
+          </a>
+        </article>
+
+        <article class="product">
+          <div class="product-art" aria-hidden="true">❋</div>
+          <h3>Body Mists</h3>
+          <p>Find your everyday favourite.</p>
+          <a class="button order-link" href="#contact"
+             data-product="Body Mists and Sprays">
+            ENQUIRE
+          </a>
+        </article>
+
+        <article class="product">
+          <div class="product-art" aria-hidden="true">◇</div>
+          <h3>Jewelry</h3>
+          <p>Discover available accessories.</p>
+          <a class="button order-link" href="#contact"
+             data-product="Jewelry and Accessories">
+            ENQUIRE
+          </a>
+        </article>
+
+        <article class="product">
+          <div class="product-art" aria-hidden="true">♡</div>
+          <h3>Gift Sets</h3>
+          <p>Let's find a thoughtful gift.</p>
+          <a class="button order-link" href="#contact"
+             data-product="Gift Sets">
+            ENQUIRE
+          </a>
+        </article>
+      </div>
+
+      <p class="note">
+        Product availability and prices will be confirmed before ordering.
+      </p>
+    </section>
+
+    <section id="about">
+      <div class="about">
+        <p class="eyebrow">Welcome to our world</p>
+        <h2>A Touch of Naturalè</h2>
+        <p>
+          We believe that the right fragrance, a thoughtful gift
+          and the little details can make an ordinary day feel
+          extraordinary. We are building a collection of fragrances,
+          beauty essentials and accessories for life's special moments.
+        </p>
+        <a class="button button-light" href="#contact">
+          GET IN TOUCH
+        </a>
+      </div>
+    </section>
+
+    <section id="contact" style="background: var(--ivory); text-align: center;">
+      <p class="eyebrow">We'd love to hear from you</p>
+      <h2 style="font-weight: normal; margin-bottom: 12px;">
+        Let's find your favourite.
+      </h2>
+      <p style="color: var(--muted); margin-bottom: 22px;">
+        Contact us on WhatsApp for product enquiries and orders.
+      </p>
+      <a class="button" id="whatsapp-main" href="#contact">
+        CHAT WITH US ON WHATSAPP
+      </a>
+      <p class="note" id="contact-note">
+        Our WhatsApp contact will be added soon.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="brand">Scent <span style="color: var(--gold);">Naturalè</span></div>
+    <p>Fragrance · Beauty · Accessories · Gifts</p>
+    <p>Everyday elegance, thoughtfully chosen.</p>
+    <p>&copy; <span id="year"></span> Scent Naturalè. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // We will add your WhatsApp Business number in a later step.
+    // Use the international format without + or spaces.
+    const whatsappNumber = "";
+
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    function openWhatsApp(product) {
+      if (!/^234\d{10}$/.test(whatsappNumber)) {
+        alert("Our WhatsApp contact is being set up. Please check back soon.");
+        return;
+      }
+
+      const message = "Hello Scent Naturalè! I'd like to enquire about " + product + ".";
+      const url = "https://wa.me/" + whatsappNumber +
+        "?text=" + encodeURIComponent(message);
+
+      window.open(url, "_blank");
+    }
+
+    document.querySelectorAll(".order-link").forEach(function(link) {
+      link.addEventListener("click", function(event) {
+        event.preventDefault();
+        openWhatsApp(link.dataset.product);
+      });
+    });
+
+    document.getElementById("whatsapp-main")
+      .addEventListener("click", function(event) {
+        event.preventDefault();
+        openWhatsApp("your available products");
+      });
+  </script>
+</body>
+</html>

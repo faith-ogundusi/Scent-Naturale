@@ -271,6 +271,48 @@
     object-fit: contain;
   }
 
+
+.product-image {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  background: var(--ivory);
+  padding: 12px;
+}
+
+.product-info {
+  padding: 18px 12px 0;
+}
+
+.product .product-label {
+  color: var(--muted);
+  font: 10px Arial, sans-serif;
+  letter-spacing: 1.3px;
+  margin: 0 0 8px;
+}
+
+.product .product-price {
+  color: var(--mocha);
+  font: 16px Arial, sans-serif;
+  font-weight: bold;
+  margin: 10px 0 18px;
+}
+
+.product-info .button {
+  width: 100%;
+  max-width: 100%;
+  padding: 13px 8px;
+  font-size: 9px;
+  letter-spacing: .8px;
+}
+
+@media (min-width: 700px) {
+  .product-image {
+    height: 250px;
+  }
+}
+
   .product h3 {
     font-size: 16px;
     font-weight: normal;
@@ -483,92 +525,64 @@
       </div>
     </section>
 
-    <section class="products" id="shop">
-      <div class="section-heading">
-        <p class="eyebrow">The Scent Naturalè edit</p>
-        <h2>Explore Our Store</h2>
-        <p>Our collection is being prepared just for you.</p>
-      </div>
-
-      <div class="product-grid">
-       
-<article class="product">
-  <img
-    src="images/wave-mists.jpg"
-    alt="Wave Plum Perfect and Escape Citrus Zing 250 ml body mists"
-    style="width:100%; height:180px; object-fit:contain; background:#f5efe5; padding:8px;"
-    loading="lazy"
-  >
-  <h3>Wave Plum Perfect</h3>
-  <p>Perfumed body mist · 250 ml</p>
-  <p><strong>₦4,500</strong></p>
-  <a
-    class="button order-link"
-    href="#contact"
-    data-product="Wave Plum Perfect 250 ml — ₦4,500"
-  >ENQUIRE</a>
-</article>
-
-<article class="product">
-  <img
-    src="images/wave-mists.jpg"
-    alt="Escape Citrus Zing 250 ml body mist"
-    style="width:100%; height:180px; object-fit:contain; background:#f5efe5; padding:8px;"
-    loading="lazy"
-  >
-  <h3>Escape Citrus Zing</h3>
-  <p>Perfumed body mist · 250 ml</p>
-  <p><strong>₦4,500</strong></p>
-  <a
-    class="button order-link"
-    href="#contact"
-    data-product="Escape Citrus Zing 250 ml — ₦4,500"
-  >ENQUIRE</a>
-</article>
+    
+<section class="products" id="shop">
+  <div class="section-heading">
+    <p class="eyebrow">THE SCENT NATURALÈ EDIT</p>
+    <h2>Explore Our Store</h2>
+    <p>Find the fragrance that feels like you.</p>
   </div>
-          <h3>Perfumes & Oils</h3>
-          <p>Ask us about available scents.</p>
-          <a class="button order-link" href="#contact"
-             data-product="Perfumes and Fragrance Oils">
-            ENQUIRE
-          </a>
-        </article>
 
-        <article class="product">
-          <div class="product-art" aria-hidden="true">❋</div>
-          <h3>Body Mists</h3>
-          <p>Find your everyday favourite.</p>
-          <a class="button order-link" href="#contact"
-             data-product="Body Mists and Sprays">
-            ENQUIRE
-          </a>
-        </article>
+  <div class="product-grid">
 
-        <article class="product">
-          <div class="product-art" aria-hidden="true">◇</div>
-          <h3>Jewelry</h3>
-          <p>Discover available accessories.</p>
-          <a class="button order-link" href="#contact"
-             data-product="Jewelry and Accessories">
-            ENQUIRE
-          </a>
-        </article>
+    <article class="product">
+      <img
+        class="product-image"
+        src="images/wave-mists.jpg"
+        alt="Wave Plum Perfect and Escape Citrus Zing body mists"
+        loading="lazy"
+      >
 
-        <article class="product">
-          <div class="product-art" aria-hidden="true">♡</div>
-          <h3>Gift Sets</h3>
-          <p>Let's find a thoughtful gift.</p>
-          <a class="button order-link" href="#contact"
-             data-product="Gift Sets">
-            ENQUIRE
-          </a>
-        </article>
+      <div class="product-info">
+        <p class="product-label">BODY MIST · 250 ML</p>
+        <h3>Wave Plum Perfect</h3>
+        <p class="product-price">₦4,500</p>
+
+        <a
+          class="button order-link"
+          href="#contact"
+          data-product="Wave Plum Perfect 250 ml — ₦4,500"
+        >ENQUIRE ON WHATSAPP</a>
       </div>
+    </article>
 
-      <p class="note">
-        Product availability and prices will be confirmed before ordering.
-      </p>
-    </section>
+    <article class="product">
+      <img
+        class="product-image"
+        src="images/wave-mists.jpg"
+        alt="Wave Escape Citrus Zing body mist"
+        loading="lazy"
+      >
+
+      <div class="product-info">
+        <p class="product-label">BODY MIST · 250 ML</p>
+        <h3>Escape Citrus Zing</h3>
+        <p class="product-price">₦4,500</p>
+
+        <a
+          class="button order-link"
+          href="#contact"
+          data-product="Escape Citrus Zing 250 ml — ₦4,500"
+        >ENQUIRE ON WHATSAPP</a>
+      </div>
+    </article>
+
+  </div>
+
+  <p class="note">
+    Have a scent in mind? Contact us to confirm availability.
+  </p>
+</section>
 
     <section id="about">
       <div class="about">

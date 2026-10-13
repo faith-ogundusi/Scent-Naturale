@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#30241f">
+  <meta name="description" content="Discover your personal fragrance style with Scent Naturalè. Find scents that express you.">
+  <title>Discover Your Scent | Scent Naturalè</title>
+
+  <style>
+    :root {
+      --ivory: #f7f2e9;
+      --gold: #c7a66a;
+      --mocha: #654735;
+      --espresso: #30241f;
+      --white: #fffdf9;
+      --muted: #786d64;
+      --border: #e8ded0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--white);
+      color: var(--espresso);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .announcement {
+      background: var(--espresso);
+      color: var(--ivory);
+      text-align: center;
+      padding: 9px 12px;
+      font: 10px Arial, sans-serif;
+      letter-spacing: 1.5px;
+    }
+
+    header {
+      padding: 20px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand {
+      font-size: 27px;
+      font-weight: bold;
+      letter-spacing: -1px;
+      line-height: 1.2;
+    }
+
+    .brand span {
+      color: var(--mocha);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      font: 11px Arial, sans-serif;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    .hero {
+      background: var(--ivory);
+      text-align: center;
+      padding: 75px 7%;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .eyebrow {
+      color: var(--mocha);
+      font: 10px Arial, sans-serif;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(37px, 7vw, 62px);
+      font-weight: normal;
+      line-height: 1.2;
+      margin-bottom: 22px;
+    }
+
+    h1 em {
+      color: var(--mocha);
+    }
+
+    .hero p:last-child {
+      max-width: 520px;
+      margin: auto;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    main {
+      max-width: 900px;
+      margin: auto;
+      padding: 55px 6%;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    h2 {
+      font-size: clamp(27px, 5vw, 38px);
+      font-weight: normal;
+      line-height: 1.3;
+      margin-bottom: 15px;
+    }
+
+    .intro p,
+    .closing p {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .principles {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+      margin-bottom: 48px;
+    }
+
+    .principle {
+      padding: 25px 22px;
+      background: var(--ivory);
+      border: 1px solid var(--border);
+    }
+
+    .number {
+      color: var(--gold);
+      font-size: 25px;
+      margin-bottom: 8px;
+    }
+
+    .principle h3 {
+      font-size: 20px;
+      font-weight: normal;
+      margin-bottom: 8px;
+    }
+
+    .principle p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .preferences {
+      background: #faf7f1;
+      border: 1px solid var(--border);
+      padding: 28px 20px;
+      margin-bottom: 35px;
+    }
+
+    .preferences h2 {
+      text-align: center;
+    }
+
+    .preferences > p {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 24px;
+    }
+
+    .preferences label {
+      display: block;
+      font-size: 13px;
+      margin: 18px 0 7px;
+    }
+
+    select {
+      width: 100%;
+      padding: 13px;
+      border: 1px solid var(--border);
+      border-radius: 0;
+      background: var(--white);
+      color: var(--espresso);
+      font: 14px Arial, sans-serif;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--espresso);
+      color: var(--white);
+      padding: 14px 20px;
+      border: 1px solid var(--espresso);
+      text-align: center;
+      font: 10px Arial, sans-serif;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background: var(--mocha);
+    }
+
+    .preferences .button {
+      display: block;
+      width: 100%;
+      margin-top: 25px;
+    }
+
+    .closing {
+      text-align: center;
+      padding: 15px 0 30px;
+    }
+
+    .closing .button {
+      margin-top: 22px;
+    }
+
+    footer {
+      background: var(--espresso);
+      color: var(--ivory);
+      text-align: center;
+      padding: 32px 5%;
+      border-top: 3px solid var(--gold);
+    }
+
+    footer p {
+      font: 12px Arial, sans-serif;
+      margin: 8px 0;
+    }
+
+    footer a {
+      text-decoration: underline;
+      text-decoration-color: var(--gold);
+      text-underline-offset: 4px;
+    }
+
+    @media (min-width: 700px) {
+      header {
+        padding: 24px 7%;
+      }
+
+      .principles {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .preferences {
+        padding: 38px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav {
+        gap: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="announcement">
+    YOUR SCENT. YOUR SIGNATURE.
+  </div>
+
+  <header>
+    <a class="brand" href="index.html">
+      Scent <span>Naturalè</span>
+    </a>
+
+    <nav aria-label="Main navigation">
+      <a href="index.html">HOME</a>
+      <a href="shop.html">SHOP</a>
+      <a href="discover-your-scent.html">DISCOVER YOUR SCENT</a>
+      <a href="body-care.html">BODY CARE</a>
+      <a href="our-story.html">OUR STORY</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <p class="eyebrow">YOUR PERSONAL FRAGRANCE JOURNEY</p>
+    <h1>Don't just wear a scent.<br><em>Make it yours.</em></h1>
+    <p>
+      Your fragrance should feel like an expression of you.
+      Let's explore the scent notes, moods and routines
+      that make you feel your best.
+    </p>
+  </section>
+
+  <main>
+    <div class="intro">
+      <p class="eyebrow">THE SCENT NATURALÈ PHILOSOPHY</p>
+      <h2>You don't need more perfume.<br>You need your signature scent.</h2>
+      <p>
+        We believe fragrance is personal. The goal isn't to
+        wear everything at once, but to discover combinations
+        that complement one another and feel right for you.
+      </p>
+    </div>
+
+    <div class="principles">
+      <article class="principle">
+        <p class="number">01</p>
+        <h3>Know your notes</h3>
+        <p>
+          Explore fresh citrus, soft florals, warm woods,
+          sweet gourmand scents and deeper amber notes.
+        </p>
+      </article>
+
+      <article class="principle">
+        <p class="number">02</p>
+        <h3>Build your foundation</h3>
+        <p>
+          Good hygiene and moisturised skin help create
+          a thoughtful foundation for your fragrance routine.
+        </p>
+      </article>
+
+      <article class="principle">
+        <p class="number">03</p>
+        <h3>Layer with intention</h3>
+        <p>
+          Choose complementary products and apply fragrance
+          thoughtfully for a balanced, personal impression.
+        </p>
+      </article>
+    </div>
+
+    <section class="preferences">
+      <p class="eyebrow">LET'S GET TO KNOW YOUR TASTE</p>
+      <h2>What feels like you?</h2>
+      <p>
+        Choose your preferences below and send them to us
+        on WhatsApp for personalised fragrance guidance.
+      </p>
+
+      <form id="scentForm">
+        <label for="scentFamily">Which scent family attracts you most?</label>
+        <select id="scentFamily" required>
+          <option value="">Choose a scent family</option>
+          <option>Fresh and citrusy</option>
+          <option>Floral and feminine</option>
+          <option>Sweet and gourmand</option>
+          <option>Warm and woody</option>
+          <option>Musky and sensual</option>
+          <option>Rich and ambery</option>
+          <option>I'm not sure yet</option>
+        </select>
+
+        <label for="scentMood">How would you like your scent to feel?</label>
+        <select id="scentMood" required>
+          <option value="">Choose your preferred mood</option>
+          <option>Clean and effortless</option>
+          <option>Soft and romantic</option>
+          <option>Elegant and sophisticated</option>
+          <option>Warm and inviting</option>
+          <option>Bold and memorable</option>
+          <option>Fresh and energetic</option>
+        </select>
+
+        <label for="scentOccasion">When will you wear it most?</label>
+        <select id="scentOccasion" required>
+          <option value="">Choose an occasion</option>
+          <option>Everyday and work</option>
+          <option>Outings and social events</option>
+          <option>Dates and special occasions</option>
+          <option>Evenings and relaxation</option>
+          <option>A little of everything</option>
+        </select>
+
+        <button class="button" type="submit">
+          SEND MY PREFERENCES ON WHATSAPP
+        </button>
+      </form>
+    </section>
+
+    <div class="closing">
+      <h2>Your scent story starts here.</h2>
+      <p>
+        You don't have to know all the fragrance terminology.
+        Tell us what you love, and we'll help you explore
+        suitable options from our available collection.
+      </p>
+      <a class="button" href="shop.html">EXPLORE THE COLLECTION</a>
+    </div>
+  </main>
+
+  <footer>
+    <a class="brand" href="index.html" style="color:var(--ivory)">
+      Scent <span>Naturalè</span>
+    </a>
+    <p>Your scent. Your signature.</p>
+    <p><a href="index.html">Return to homepage</a></p>
+    <p>© <span id="year"></span> Scent Naturalè</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    document.getElementById("scentForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const family = document.getElementById("scentFamily").value;
+      const mood = document.getElementById("scentMood").value;
+      const occasion = document.getElementById("scentOccasion").value;
+
+      const message =
+        "Hello Scent Naturalè! I'd love help discovering my signature scent.%0A%0A" +
+        "My preferred scent family: " + encodeURIComponent(family) + "%0A" +
+        "My preferred mood: " + encodeURIComponent(mood) + "%0A" +
+        "Main occasion: " + encodeURIComponent(occasion) +
+        "%0A%0APlease recommend suitable options from your available collection.";
+
+      window.open(
+        "https://wa.me/2348068074507?text=" + message,
+        "_blank",
+        "noopener,noreferrer"
+      );
+    });
+  </script>
+</body>
+</html>

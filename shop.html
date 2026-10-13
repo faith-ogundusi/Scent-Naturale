@@ -1,0 +1,351 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#30241f">
+  <meta name="description" content="Explore the Scent Naturalè fragrance catalogue, body mists and personal scent essentials.">
+  <title>Shop | Scent Naturalè</title>
+
+  <style>
+    :root {
+      --ivory: #f7f2e9;
+      --gold: #c7a66a;
+      --mocha: #654735;
+      --espresso: #30241f;
+      --white: #fffdf9;
+      --muted: #786d64;
+      --border: #e8ded0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--white);
+      color: var(--espresso);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .announcement {
+      background: var(--espresso);
+      color: var(--ivory);
+      text-align: center;
+      padding: 9px 12px;
+      font: 10px Arial, sans-serif;
+      letter-spacing: 1.5px;
+    }
+
+    header {
+      padding: 20px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand {
+      font-size: 27px;
+      font-weight: bold;
+      letter-spacing: -1px;
+      line-height: 1.2;
+    }
+
+    .brand span {
+      color: var(--mocha);
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      font: 11px Arial, sans-serif;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    .hero {
+      background: var(--ivory);
+      text-align: center;
+      padding: 65px 7%;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .eyebrow {
+      color: var(--mocha);
+      font: 10px Arial, sans-serif;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: clamp(36px, 7vw, 58px);
+      font-weight: normal;
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+
+    .hero p:last-child {
+      color: var(--muted);
+      font-size: 14px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    main {
+      padding: 55px 5%;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .section-heading h2 {
+      font-size: 30px;
+      font-weight: normal;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      font: 12px Arial, sans-serif;
+      margin-top: 8px;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .product {
+      border: 1px solid var(--border);
+      background: var(--white);
+      text-align: center;
+      overflow: hidden;
+      padding-bottom: 18px;
+    }
+
+    .product img {
+      width: 100%;
+      height: 190px;
+      object-fit: contain;
+      display: block;
+      padding: 10px;
+      background: var(--ivory);
+    }
+
+    .product-info {
+      padding: 15px 10px 0;
+    }
+
+    .product-label {
+      color: var(--muted);
+      font: 10px Arial, sans-serif;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+
+    .product h3 {
+      font-size: 16px;
+      font-weight: normal;
+      line-height: 1.4;
+    }
+
+    .price {
+      color: var(--mocha);
+      font: bold 16px Arial, sans-serif;
+      margin: 10px 0 16px;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--espresso);
+      color: white;
+      padding: 12px 10px;
+      margin: 0 8px;
+      font: 10px Arial, sans-serif;
+      letter-spacing: .5px;
+      text-align: center;
+    }
+
+    .button:hover {
+      background: var(--mocha);
+    }
+
+    .note {
+      text-align: center;
+      color: var(--muted);
+      font: 12px Arial, sans-serif;
+      margin-top: 28px;
+    }
+
+    footer {
+      background: var(--espresso);
+      color: var(--ivory);
+      text-align: center;
+      padding: 32px 5%;
+      border-top: 3px solid var(--gold);
+    }
+
+    footer p {
+      font: 12px Arial, sans-serif;
+      margin: 8px 0;
+    }
+
+    footer a {
+      text-decoration: underline;
+      text-decoration-color: var(--gold);
+      text-underline-offset: 4px;
+    }
+
+    @media (min-width: 700px) {
+      header {
+        padding: 24px 7%;
+      }
+
+      main {
+        padding: 75px 7%;
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 22px;
+      }
+
+      .product img {
+        height: 250px;
+      }
+    }
+
+    @media (max-width: 380px) {
+      header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      nav {
+        gap: 12px;
+      }
+
+      .product-grid {
+        gap: 9px;
+      }
+
+      .product h3 {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="announcement">
+    YOUR SCENT. YOUR SIGNATURE.
+  </div>
+
+  <header>
+    <a class="brand" href="index.html">
+      Scent <span>Naturalè</span>
+    </a>
+
+    <nav aria-label="Main navigation">
+      <a href="index.html">HOME</a>
+      <a href="shop.html">SHOP</a>
+      <a href="discover-your-scent.html">DISCOVER YOUR SCENT</a>
+      <a href="body-care.html">BODY CARE</a>
+      <a href="our-story.html">OUR STORY</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <p class="eyebrow">THE SCENT NATURALÈ EDIT</p>
+    <h1>Find the scent<br>that feels like you.</h1>
+    <p>
+      Explore our fragrance collection and discover little luxuries
+      that complement your personality and everyday life.
+    </p>
+  </section>
+
+  <main>
+    <div class="section-heading">
+      <h2>Our Collection</h2>
+      <p>Thoughtfully chosen. Beautifully personal.</p>
+    </div>
+
+    <div class="product-grid">
+      <article class="product">
+        <img
+          src="images/wave-mists.jpg"
+          alt="Wave Plum Perfect and Escape Citrus Zing 250 ml body mists"
+          loading="lazy"
+        >
+        <div class="product-info">
+          <p class="product-label">BODY MIST · 250 ML</p>
+          <h3>Wave Plum Perfect</h3>
+          <p class="price">₦4,500</p>
+          <a
+            class="button"
+            href="https://wa.me/2348068074507?text=Hello%20Scent%20Natural%C3%A8%2C%20I%20am%20interested%20in%20Wave%20Plum%20Perfect%20250%20ml%20%E2%80%94%20%E2%82%A64%2C500."
+            target="_blank"
+            rel="noopener noreferrer"
+          >ENQUIRE ON WHATSAPP</a>
+        </div>
+      </article>
+
+      <article class="product">
+        <img
+          src="images/wave-mists.jpg"
+          alt="Escape Citrus Zing 250 ml body mist"
+          loading="lazy"
+        >
+        <div class="product-info">
+          <p class="product-label">BODY MIST · 250 ML</p>
+          <h3>Escape Citrus Zing</h3>
+          <p class="price">₦4,500</p>
+          <a
+            class="button"
+            href="https://wa.me/2348068074507?text=Hello%20Scent%20Natural%C3%A8%2C%20I%20am%20interested%20in%20Escape%20Citrus%20Zing%20250%20ml%20%E2%80%94%20%E2%82%A64%2C500."
+            target="_blank"
+            rel="noopener noreferrer"
+          >ENQUIRE ON WHATSAPP</a>
+        </div>
+      </article>
+    </div>
+
+    <p class="note">
+      More fragrances and personal-care favourites will be added as they become available.
+      Please confirm availability before ordering.
+    </p>
+  </main>
+
+  <footer>
+    <a class="brand" href="index.html" style="color:var(--ivory)">
+      Scent <span>Naturalè</span>
+    </a>
+    <p>Your scent. Your signature.</p>
+    <p><a href="index.html">Return to homepage</a></p>
+    <p>© <span id="year"></span> Scent Naturalè</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>

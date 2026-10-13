@@ -1,0 +1,408 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f4ed">
+
+  <title>Our Story | Scent Naturalè</title>
+
+  <meta name="description" content="Discover the philosophy behind Scent Naturalè: personal fragrance, thoughtful body care, and finding a scent that feels uniquely yours.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --cream: #f8f4ed;
+      --ivory: #fffdf9;
+      --brown: #4c352b;
+      --mocha: #765849;
+      --gold: #b18a52;
+      --text: #51443d;
+      --muted: #81746c;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.8;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .announcement {
+      background: var(--brown);
+      color: #fffaf2;
+      text-align: center;
+      padding: 9px 14px;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+    }
+
+    header {
+      background: var(--ivory);
+      padding: 20px 16px 15px;
+      text-align: center;
+      border-bottom: 1px solid #e9dfd2;
+    }
+
+    .logo {
+      color: var(--brown);
+      font-size: 30px;
+      letter-spacing: 1px;
+      line-height: 1.3;
+    }
+
+    .tagline {
+      color: var(--gold);
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-top: 5px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 9px 17px;
+      margin-top: 19px;
+    }
+
+    nav a {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      color: var(--brown);
+      padding-bottom: 4px;
+    }
+
+    nav a.active {
+      border-bottom: 1px solid var(--gold);
+    }
+
+    .hero {
+      padding: 66px 22px;
+      text-align: center;
+      background: #eee4d7;
+    }
+
+    .eyebrow {
+      color: var(--mocha);
+      font-family: Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      color: var(--brown);
+      font-size: clamp(35px, 8vw, 53px);
+      font-weight: normal;
+      line-height: 1.2;
+      max-width: 650px;
+      margin: 0 auto 20px;
+    }
+
+    .hero p {
+      max-width: 530px;
+      margin: 0 auto;
+      font-size: 16px;
+      color: #66564b;
+    }
+
+    main {
+      max-width: 850px;
+      margin: 0 auto;
+      padding: 55px 22px;
+    }
+
+    .story-section {
+      margin-bottom: 48px;
+    }
+
+    .story-section h2 {
+      color: var(--brown);
+      font-size: 29px;
+      font-weight: normal;
+      line-height: 1.35;
+      margin-bottom: 16px;
+    }
+
+    .story-section p {
+      margin-bottom: 15px;
+      font-size: 15px;
+    }
+
+    .quote {
+      background: var(--ivory);
+      border-left: 3px solid var(--gold);
+      padding: 25px 23px;
+      margin: 38px 0 48px;
+      color: var(--brown);
+      font-size: 23px;
+      line-height: 1.5;
+      font-style: italic;
+    }
+
+    .values {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 15px;
+      margin-top: 23px;
+    }
+
+    .value-card {
+      background: var(--ivory);
+      padding: 22px;
+      border: 1px solid #e9dfd2;
+    }
+
+    .value-card h3 {
+      color: var(--mocha);
+      font-size: 20px;
+      font-weight: normal;
+      margin-bottom: 8px;
+    }
+
+    .value-card p {
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      margin: 0;
+    }
+
+    .closing {
+      background: var(--brown);
+      color: #fffaf2;
+      text-align: center;
+      padding: 45px 23px;
+    }
+
+    .closing h2 {
+      font-size: 31px;
+      font-weight: normal;
+      line-height: 1.35;
+      margin-bottom: 13px;
+    }
+
+    .closing p {
+      font-size: 14px;
+      max-width: 500px;
+      margin: 0 auto 24px;
+      color: #eee0d0;
+    }
+
+    .button {
+      display: inline-block;
+      background: var(--gold);
+      color: white;
+      padding: 12px 22px;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    footer {
+      background: #35251f;
+      color: #e9dccc;
+      text-align: center;
+      padding: 25px 15px;
+      font-family: Arial, sans-serif;
+      font-size: 11px;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    @media (min-width: 650px) {
+      header {
+        padding: 24px;
+      }
+
+      .values {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .hero {
+        padding: 85px 30px;
+      }
+
+      main {
+        padding: 70px 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="announcement">
+    YOUR SCENT. YOUR STORY. YOUR SIGNATURE.
+  </div>
+
+  <header>
+    <a href="index.html">
+      <div class="logo">Scent Naturalè</div>
+      <div class="tagline">Discover your natural allure</div>
+    </a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="discover-your-scent.html">Discover Your Scent</a>
+      <a href="body-care.html">Body Care</a>
+      <a href="our-story.html" class="active">Our Story</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="eyebrow">The heart of Scent Naturalè</div>
+
+    <h1>Fragrance should feel like you.</h1>
+
+    <p>
+      Not a cloud of competing perfumes. Not a scent that enters
+      the room before you do. Just a beautiful, personal fragrance
+      that feels natural, intentional and unmistakably yours.
+    </p>
+  </section>
+
+  <main>
+
+    <section class="story-section">
+      <h2>More than smelling good</h2>
+
+      <p>
+        At Scent Naturalè, we believe smelling good is more than
+        choosing an expensive perfume or layering several fragrances.
+        It is about discovering what works for your body, your
+        preferences and your everyday life.
+      </p>
+
+      <p>
+        Your fragrance journey begins with understanding the kind
+        of scents you love, caring for your skin, maintaining good
+        hygiene and learning how to bring everything together
+        beautifully.
+      </p>
+
+      <p>
+        The goal is not to overwhelm the people around you. It is
+        to leave a gentle, memorable impression — one that makes
+        someone think, "You smell so good!"
+      </p>
+    </section>
+
+    <div class="quote">
+      "We don't just want you to wear a fragrance. We want you
+      to discover a scent that feels like your own."
+    </div>
+
+    <section class="story-section">
+      <h2>Our philosophy: your scent, your way</h2>
+
+      <p>
+        Everyone has different tastes, routines and fragrance
+        preferences. Some people love fresh, clean scents. Others
+        are drawn to warm vanilla, soft florals, fruity notes
+        or rich, woody fragrances.
+      </p>
+
+      <p>
+        We believe there is no single scent that everyone should
+        wear. Instead, we help you explore your preferences and
+        build a fragrance routine around what makes you feel
+        comfortable and confident.
+      </p>
+
+      <p>
+        From body care to moisturising products and perfume
+        layering, every choice should have a purpose. The result
+        is a more thoughtful approach to smelling good.
+      </p>
+    </section>
+
+    <section class="story-section">
+      <h2>What we stand for</h2>
+
+      <div class="values">
+
+        <div class="value-card">
+          <h3>Personalisation</h3>
+          <p>
+            Your fragrance should reflect your taste and
+            personality, not simply follow a trend.
+          </p>
+        </div>
+
+        <div class="value-card">
+          <h3>Thoughtful care</h3>
+          <p>
+            Good hygiene and suitable body care are important
+            foundations of a pleasant fragrance routine.
+          </p>
+        </div>
+
+        <div class="value-card">
+          <h3>Balance</h3>
+          <p>
+            We believe in complementary scents, mindful
+            layering and wearing fragrance with intention.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="story-section">
+      <h2>Our promise to you</h2>
+
+      <p>
+        Scent Naturalè is here to make your fragrance journey
+        easier to understand and more personal. Whether you are
+        discovering your first signature perfume or refining
+        a routine you already love, we want to help you make
+        choices that suit you.
+      </p>
+
+      <p>
+        Because smelling good should not feel complicated.
+        It should feel like a natural part of being yourself.
+      </p>
+    </section>
+
+  </main>
+
+  <section class="closing">
+    <h2>Ready to discover your signature scent?</h2>
+
+    <p>
+      Let's explore the fragrance notes you love and build a
+      routine that feels uniquely yours.
+    </p>
+
+    <a href="discover-your-scent.html" class="button">
+      DISCOVER YOUR SCENT
+    </a>
+  </section>
+
+  <footer>
+    <p>Scent Naturalè</p>
+    <p>Your scent. Your story. Your signature.</p>
+    <p>© 2026 Scent Naturalè. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
